@@ -1,0 +1,29 @@
+<script>
+    const emojiDict = {
+        pain: "💔",
+        success: "🚀",
+        money: "💰",
+        music: "🎤",
+        dream: "🌙",
+        fire: "🔥",
+        star: "⭐",
+        love: "❤️",
+        sad: "😢",
+        happy: "😎"
+        // … tu peux ajouter plus
+    };
+
+    function generateEmoji() {
+        let text = document.getElementById("textInput").value.toLowerCase();
+        let words = text.split(" ");
+        let result = "";
+
+        words.forEach(word => {
+            if (emojiDict[word]) {
+                result += emojiDict[word];
+            }
+        });
+
+        document.getElementById("result").innerHTML = result;
+    }
+  </script>
